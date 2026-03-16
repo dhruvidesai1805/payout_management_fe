@@ -1,14 +1,21 @@
-import "./globals.css";
+import './globals.css';
+import Providers from '@/components/Providers';
+import { Toaster } from 'sonner';
 
 export const metadata = {
-  title: "Payout Management MVP",
-  description: "Small but complete full-stack payout management feature",
+  title: 'PayFlow — Payout Management',
+  description: 'Payout Management System',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>
+          {children}
+          <Toaster position="top-center" richColors closeButton />
+        </Providers>
+      </body>
     </html>
   );
 }

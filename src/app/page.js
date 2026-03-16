@@ -1,8 +1,23 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
+import { Box, CircularProgress } from '@mui/material';
+
 export default function Home() {
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!loading) {
+      router.push(user ? '/payouts' : '/login');
+    }
+  }, [user, loading, router]);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">Payout Management MVP</h1>
-      <p className="mt-4 text-xl text-gray-600">Initial Setup Complete</p>
-    </main>
+    <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+      <CircularProgress color="primary" />
+    </Box>
   );
 }
