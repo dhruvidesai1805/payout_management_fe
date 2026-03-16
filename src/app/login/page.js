@@ -109,60 +109,6 @@ function LoginForm() {
           Streamlined payout management for your operations and finance teams.
         </Typography>
 
-        <Box
-          sx={{
-            mt: 4,
-            p: 2.5,
-            bgcolor: 'rgba(255,255,255,0.05)',
-            borderRadius: 2,
-            border: '1px solid rgba(255,255,255,0.1)',
-            width: '100%',
-            maxWidth: 320,
-          }}
-        >
-          <Typography
-            variant="caption"
-            sx={{ color: 'rgba(255,255,255,0.4)', display: 'block', mb: 1.5, fontWeight: 600 }}
-          >
-            DEMO CREDENTIALS
-          </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-            <Box
-              onClick={() => fillCredentials('OPS')}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 1.5,
-                cursor: 'pointer',
-                p: 1,
-                borderRadius: 1,
-                '&:hover': { bgcolor: 'rgba(255,255,255,0.05)' },
-              }}
-            >
-              <Chip label="OPS" size="small" sx={{ bgcolor: '#0d9488', color: 'white', fontWeight: 600, fontSize: '0.65rem' }} />
-              <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
-                ops@demo.com / ops123
-              </Typography>
-            </Box>
-            <Box
-              onClick={() => fillCredentials('FINANCE')}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 1.5,
-                cursor: 'pointer',
-                p: 1,
-                borderRadius: 1,
-                '&:hover': { bgcolor: 'rgba(255,255,255,0.05)' },
-              }}
-            >
-              <Chip label="FINANCE" size="small" sx={{ bgcolor: '#16a34a', color: 'white', fontWeight: 600, fontSize: '0.65rem' }} />
-              <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
-                finance@demo.com / fin123
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
       </Box>
 
       {/* Right panel — form */}
